@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Globales*/
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Utilidades*/
+
+.centrar-texto {
+    text-align: center;
+}
+.no-margin {
+    margin: 0;
+}
+.italic {
+    font-style: italic;
+}
+.centrar-contenido {
+    text-align: center;
+}
+
+/* Nav */
+
+.background-yoga {
+    position: absolute;
+    z-index: -1;
+    height: 575px;
+    min-width: 100%;
+
+    /*BG Properties*/
+    background-image: url(img/close-up-woman-meditating-on-yoga-mat.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(50%);
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+    background-color: rgba(253,93,93,50%);
+    align-items: center;
+}
+
+.navigation nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-size: 1rem;
+    color: rgb(255,255,255,75%);
+}
+.navigation nav ul li:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.navigation .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navigation .logo-container p {
+    color: white;
+    font-size: 1.5rem;
+}
+.navigation .logo-container img {
+    width: 23%;
+}
+
+/** Nav Resp **/
+.navigation .bx.bx-menu {
+    display: none;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .navigation .desktop-nav {
+        display: none;
+    }
+    .navigation .bx.bx-menu {
+        display: block;
+    }
+}
+/*-----------*/
+
+/* Header */
+
+.contenido-header {
+    display: grid;
+    grid-template-columns: 1fr .6fr;
+    min-height: 512px; /*BG Size + Nav Size*/
+}
+.contenido-header h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: white;
+}
+.contenido-header h1 span {
+    font-weight: 600;
+}
+.contenido-header h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+    white-space: nowrap;
+}
+.presentacion {
+    display: grid;
+    grid-column: 2 / 3;
+    align-self: center;
+    row-gap: 15px;
+}
+.presentacion h1, .presentacion h2 {
+    font-weight: 400;
+}
+
+/** Header Resp **/
+@media (max-width: 768px) {
+    .contenido-header {
+        display: block;
+    }
+    .contenido-header h2 {
+        white-space: normal;
+    }
+    .contenido-header .presentacion {
+        padding-top: 7.5rem;
+    }
+}
+
+/*-------------------------------------*/
+/*Intro*/
+.introduccion h2 {
+    color: #FF8080;
+    font-size: 1.6rem;
+    margin: 2rem 0;
+}
+.introduccion h2 span {
+    color: #FD5D5D;
+}
+.introduccion .banner-intro {
+    height: 250px;
+    display: grid;
+    /*BG Properties*/
+    background-image: url(img/banner.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.introduccion .banner-intro p {
+    font-size: 1.2rem;
+    width: 40%;
+    min-width: 375px;
+    color: #FD5D5D;
+    align-self: center;
+}
+/*Filosofia*/
+.filosofia-yoga {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    column-gap: 20px;
+    align-items: center;
+}
+.imagen-filosofia {
+    min-width: 17rem;
+    padding: 1.5rem;
+}
+.contenido-filosofia {
+    align-self: center;
+    font-size: 1rem;
+    color: #69D989;
+    padding: 2rem 4rem;
+    /*Separación*/
+    display: grid;
+    gap: 1.4rem;
+}
+.contenido-filosofia h2 span {
+    color: #C0EDA6;
+}
+.contenido-filosofia p {
+    font-size: 1.2rem;
+}
+.contenido-filosofia p:nth-child(3) {
+    text-align: end;
+}
+/**Filosofia-Resp**/
+@media (max-width:768px) {
+    .filosofia-yoga {
+        display: block;
+        margin-bottom: 2rem;
+    }
+    .imagen-filosofia {
+        margin: 0 auto;
+        width: 40%;
+    }
+    .contenido-filosofia {
+        padding: 0 1rem;
+        text-align: center;
+    }
+}
+/*Carrusel*/
+.banner-carrusel {
+    height: 400px;
+    background-color: pink;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-carrusel p {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 175px;
+}
+/*Videos*/
+.videos-section h2 {
+    text-align: center;
+    margin: 2rem 0;
+    color: #FF8080;
+    font-size: 1.6rem;
+}
+.videos-section h2 span {
+    color: #FD5D5D;
+}
+.contenedor-videos {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.contenedor-videos .video {
+    display: grid;
+    grid-template-columns: .4fr 1fr .2fr;
+    gap: 2rem;
+}
+.contenedor-videos .video img {
+    width: 235px;
+    height: 150px;
+}
+.content-video {
+    font-size: 1rem;
+    justify-content: center;
+    align-self: center;
+}
+.content-video .video-title {
+    font-size: 1.2rem;
+    color: #FD5D5D;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.content-video p {
+    color: #FF8080;
+    min-width: 240px;
+}
+.video .bx.bx-cart-add {
+    color: #FD5D5D;
+    justify-self: end;
+    align-self: center;
+    font-size: 2.2rem;
+}
+.video-image::before {
+    content: "Adelanto";
+    position: absolute;
+    background-color: #FD5D5D;
+    color: white;
+    padding: 3px 10px;
+    font-size: .8rem;
+    border-radius: 0 0 10px 0;
+}
+/**Video Resp**/
+@media (max-width:768px) {
+    .contenedor-videos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .contenedor-videos .video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width:615px) {
+    .contenedor-videos {
+        display: block;
+    }
+    .contenedor-videos .video {
+        margin-bottom: 2rem;
+    }
+    .contenedor-videos .video:last-child {
+        margin: 0;
+    }
+}
+
+.button-ver-mas {
+    margin: 6rem 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    padding: .2rem 6rem;
+    color: #FD5D5D;
+    background-color: white;
+    border: 2px solid #FD5D5D;
+    border-radius: 2rem;
+    transition: all .2s;
+}
+.button-ver-mas:hover {
+    background-color: #FD5D5D;
+    color: white;
+    cursor: pointer;
+}
+@media (max-width:768px) {
+    .button-ver-mas {
+        border-radius: 5px;
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: #8D3333;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.contenido-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+    font-size: .85rem;
+    text-align: center;
+    gap: 20px;
+}
+
+.logo-footer h2 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-top: 15px;
+}
+
+.nav-footer {
+    margin: 0 auto;
+    width: 75%;
+}
+
+.nav-footer ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.media-footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.3rem;
+    margin-right: 15px;
+}
+.media-footer a:last-child {
+    margin-right: 0;
+}
